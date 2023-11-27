@@ -2,58 +2,115 @@
 <project>
     <projectId>10001</projectId>
     <projectKey>IS</projectKey>
-    <exportDate>2023-11-27 18:31:05 UTC</exportDate>
+    <exportDate>2023-11-27 19:21:11 UTC</exportDate>
     <folders>
         <folder fullPath="Login" index="0"/>
     </folders>
     <testCases>
-        <testCase id="112385192" key="IS-T1">
+        <testCase id="114395349" key="IS-T4" paramType="PARAMETER">
             <attachments/>
             <confluencePageLinks/>
             <createdBy>Bruno Barreto</createdBy>
-            <createdOn>2023-11-15 20:15:53 UTC</createdOn>
+            <createdOn>2023-11-24 18:28:34 UTC</createdOn>
             <customFields/>
             <folder><![CDATA[Login]]></folder>
             <issues/>
             <labels/>
-            <name><![CDATA[Cliente sem cadastro deseja criar uma conta]]></name>
-            <objective><![CDATA[Verificar a funcionalidade de login.]]></objective>
+            <name><![CDATA[Cliente com cadastro informa dados de acesso incorretos]]></name>
+            <objective><![CDATA[]]></objective>
             <priority><![CDATA[Normal]]></priority>
             <status><![CDATA[Approved]]></status>
-            <parameters/>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[194.132.18.29]]></defaultValue>
+                    <name><![CDATA[Servidor de Testes]]></name>
+                </parameter>
+            </parameters>
             <testDataWrapper/>
-            <testScript type="bdd">
-                <details><![CDATA[Given que o cliente esteja na tela de login
-
-And não esteja cadastrado no sistema
-
-When clicar em 'criar conta'
-
-Then será redirecionado para uma tela de criação de nova conta.]]></details>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar URL Y]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve acessar tela de login]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor de Testes</var>&nbsp;]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio preenche o campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve preencher o campo 'username']]></expectedResult>
+                        <testData><![CDATA['Jos&eacute;']]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio preenche o campo 'password' com dados incorretos]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio preenche o campo 'password' com dados incorretos]]></expectedResult>
+                        <testData><![CDATA['senha-incorreta ']]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio deve clicar no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[A interface do website deve mostrar a mensagem informando o erro]]></description>
+                        <expectedResult><![CDATA[Interface deve exibir a mensagem 'Usu&aacute;rio ou senha inv&aacute;lido(s)']]></expectedResult>
+                    </step>
+                </steps>
             </testScript>
         </testCase>
-        <testCase id="113708234" key="IS-T2">
+        <testCase id="114395674" key="IS-T5" paramType="PARAMETER">
             <attachments/>
             <confluencePageLinks/>
             <createdBy>Bruno Barreto</createdBy>
-            <createdOn>2023-11-20 18:53:56 UTC</createdOn>
+            <createdOn>2023-11-24 18:43:57 UTC</createdOn>
             <customFields/>
             <folder><![CDATA[Login]]></folder>
             <issues/>
             <labels/>
-            <name><![CDATA[Cliente sem cadastro tenta fazer login]]></name>
+            <name><![CDATA[Cliente com cadastro não informa a senha]]></name>
+            <objective><![CDATA[]]></objective>
             <priority><![CDATA[Normal]]></priority>
             <status><![CDATA[Approved]]></status>
-            <parameters/>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[194.132.18.29]]></defaultValue>
+                    <name><![CDATA[Servidor de Testes]]></name>
+                </parameter>
+            </parameters>
             <testDataWrapper/>
-            <testScript type="bdd">
-                <details><![CDATA[Given que o cliente esteja na tela de login
-
-And adicione um username não cadastrado
-
-When clicar em 'fazer login'
-
-Then uma mensagem será exibida avisando que a conta não existe]]></details>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar URL Y]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve acessar tela de login]]></expectedResult>
+                        <testData><![CDATA[<var>Servidor de Testes</var>&nbsp;]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio preenche o campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve preencher o campo 'username']]></expectedResult>
+                        <testData><![CDATA['Jo&atilde;o']]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio n&atilde;o preenche o campo 'password']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o preenche o campo 'password']]></expectedResult>
+                        <testData><![CDATA[' ']]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio deve clicar no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[A interface do website deve mostrar a mensagem informando o erro]]></description>
+                        <expectedResult><![CDATA[Interface deve exibir a mensagem 'O campo senha &eacute; obrigat&oacute;rio']]></expectedResult>
+                    </step>
+                </steps>
             </testScript>
         </testCase>
     </testCases>
