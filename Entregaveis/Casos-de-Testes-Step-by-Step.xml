@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>IS</projectKey>
+    <exportDate>2023-11-27 18:31:05 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="112385192" key="IS-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Bruno Barreto</createdBy>
+            <createdOn>2023-11-15 20:15:53 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro deseja criar uma conta]]></name>
+            <objective><![CDATA[Verificar a funcionalidade de login.]]></objective>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login
+
+And não esteja cadastrado no sistema
+
+When clicar em 'criar conta'
+
+Then será redirecionado para uma tela de criação de nova conta.]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="113708234" key="IS-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Bruno Barreto</createdBy>
+            <createdOn>2023-11-20 18:53:56 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro tenta fazer login]]></name>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login
+
+And adicione um username não cadastrado
+
+When clicar em 'fazer login'
+
+Then uma mensagem será exibida avisando que a conta não existe]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
